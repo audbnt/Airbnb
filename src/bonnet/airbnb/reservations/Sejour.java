@@ -18,6 +18,12 @@ public class Sejour {
 		this.logement = logement;
 		this.nbVoyageurs = nbVoyageurs;
 	}
+	
+	public Date getDateArrivee() {
+		return dateArrivee;
+	}
+	
+	
 
 	public void afficher() {
 		logement.afficher();

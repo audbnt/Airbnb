@@ -11,20 +11,21 @@ public class Personne {
 		age = pAge;
 	}
 	
-	public String getNom() {
+	public static String getNom() {
 		return nom;
 	}
 	
-	public String getPrenom() {
+	public static String getPrenom() {
 		return prenom;
 	}
 	
-	public int getAge() {
+	public static int getAge() {
 		return age;
 	}
 	
+	
 	public static void afficher() {
 		System.out.print(prenom + " " + nom );
-		System.out.print(" ( " + age + " ans ) " );
+		
 	}
 }

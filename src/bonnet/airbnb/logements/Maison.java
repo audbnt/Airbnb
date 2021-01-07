@@ -13,4 +13,9 @@ public class Maison extends Logement {
 	}
 	
 	
+	public static void afficher() {
+		System.out.print("une maison située ");
+	}
+	
+	
 }

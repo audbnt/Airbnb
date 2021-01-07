@@ -2,23 +2,28 @@ package bonnet.airbnb.logements;
 
 import bonnet.airbnb.utilisateurs.Hote;
 
-public class Logement {
-	private Hote hote;
+public abstract class Logement {
+	private static Hote hote;
 	private int tarifParNuit;
-	private String adresse;
+	private static String adresse;
 	private int superficie;
+	private int superficieTotal;
 	private int nbVoyageursMax;
 
 	public Logement(Hote hote, int tarifParNuit, String adresse, int superficie, int nbVoyageursMax) {
-		this.hote = hote;
+		this.setHote(hote);
 		this.tarifParNuit = tarifParNuit;
 		this.adresse = adresse;
 		this.superficie = superficie;
 		this.nbVoyageursMax = nbVoyageursMax;
 	}
 	
-	public Hote getHote() {
-		return hote ;
+	public static Hote getHote() {
+		return hote;
+	}
+
+	public void setHote(Hote hote) {
+		this.hote = hote;
 	}
 
 	public int getTarifParNuit() {
@@ -36,12 +41,18 @@ public class Logement {
 	public int getNbVoyageursMax() {
 		return nbVoyageursMax;
 	}
-
-	public void afficher() {
-		System.out.print("l'hôte ");
-		hote.afficher();
-		System.out.println(".");		
-		System.out.println("L'adresse : " + adresse);
+	
+	public int getSuperficieTotal() {
+		return superficieTotal;
 	}
+
+	public static void afficher() {
+		getHote().afficher();
+		System.out.println(adresse);
+	}
+
+
+
+	
 
 }

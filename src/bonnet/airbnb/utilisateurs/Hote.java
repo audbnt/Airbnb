@@ -15,17 +15,15 @@ public class Hote extends Personne {
 
 	public static void afficher() {
 		
+		Personne.afficher();
+		System.out.print(" ( " + Personne.getAge() + " ans ) " );
+		
 		if(delaiDeReponse > 1) {
-			
-			Personne.afficher();
-			System.out.print("qui s'engage à répondre dans les "+ delaiDeReponse+" heures.");
+			System.out.println("qui s'engage à répondre dans les "+ delaiDeReponse+" heures.");
 			
 			
 		}else if(delaiDeReponse == 1) {
-			
-			
-			Personne.afficher();
-			System.out.print("qui s'engage à répondre dans l'heure.");
+			System.out.println("qui s'engage à répondre dans l'heure.");
 			
 		}
 			

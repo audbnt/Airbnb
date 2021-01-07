@@ -6,7 +6,7 @@ public class Voyageur extends Personne {
 		super(pPrenom, pNom, pAge);
 		// TODO Auto-generated constructor stub
 	}
-
+	
 	
 
 }
