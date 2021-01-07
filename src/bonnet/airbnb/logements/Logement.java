@@ -8,14 +8,14 @@ public abstract class Logement {
 	private String adresse;
 	private int superficie;
 	private int superficieTotal;
-	private int nbVoyageursMax;
+	private static int nbVoyageursMax;
 
 	public Logement(Hote hote, int tarifParNuit, String adresse, int superficie, int nbVoyageursMax) {
 		this.setHote(hote);
 		this.tarifParNuit = tarifParNuit;
 		this.setAdresse(adresse);
-		this.superficie = superficie;
-		this.nbVoyageursMax = nbVoyageursMax;
+		this.setSuperficie(superficie);
+		this.setNbVoyageursMax(nbVoyageursMax);
 	}
 	
 	public Hote getHote() {
@@ -41,18 +41,33 @@ public abstract class Logement {
 	public int getSuperficie() {
 		return superficie;
 	}
-	
-	public int getNbVoyageursMax() {
-		return nbVoyageursMax;
+
+	public void setSuperficie(int superficie) {
+		this.superficie = superficie;
 	}
-	
+
 	public int getSuperficieTotal() {
 		return superficieTotal;
 	}
+
+	public void setSuperficieTotal(int superficieTotal) {
+		this.superficieTotal = superficieTotal;
+	}
+
+	public static int getNbVoyageursMax() {
+		return nbVoyageursMax;
+	}
+
+	public void setNbVoyageursMax(int nbVoyageursMax) {
+		this.nbVoyageursMax = nbVoyageursMax;
+	}
+	
 
 	public void afficher() {
 		System.out.print("l'hôte ");
 		getHote().afficher();
 	}
+
+	
 
 }
