@@ -13,13 +13,37 @@ public class Reservation {
 	private Date dateDeReservation;
 
 	public Reservation(int identifiant, Sejour sejour, Voyageur voyageur) {
-		this.identifiant = identifiant;
+		this.setIdentifiant(identifiant);
 		this.sejour = sejour;
 		this.voyageur = voyageur;
-		estValidee = false;
-		dateDeReservation = new Date();
+		setEstValidee(false);
+		setDateDeReservation(new Date());
 	}
 
+	public int getIdentifiant() {
+		return identifiant;
+	}
+
+	public void setIdentifiant(int identifiant) {
+		this.identifiant = identifiant;
+	}
+
+	public boolean isEstValidee() {
+		return estValidee;
+	}
+
+	public void setEstValidee(boolean estValidee) {
+		this.estValidee = estValidee;
+	}
+
+	public Date getDateDeReservation() {
+		return dateDeReservation;
+	}
+
+	public void setDateDeReservation(Date dateDeReservation) {
+		this.dateDeReservation = dateDeReservation;
+	}
+	
 	public void afficher() {
 		voyageur.afficher();
 		System.out.print(" qui a fait une réservation chez ");

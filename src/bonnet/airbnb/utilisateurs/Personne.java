@@ -1,31 +1,31 @@
 package bonnet.airbnb.utilisateurs;
 
 public class Personne {
-	private static String nom;
-	private static String prenom;
-	private static int age;
+	private String nom;
+	private String prenom;
+	private int age;
 	
 	public Personne(String pPrenom, String pNom, int pAge) {
 		nom = pNom;
 		prenom = pPrenom;
-		age = pAge;
+		setAge(pAge);
 	}
-	
-	public static String getNom() {
-		return nom;
-	}
-	
-	public static String getPrenom() {
-		return prenom;
-	}
-	
-	public static int getAge() {
+
+
+	public int getAge() {
 		return age;
 	}
+
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
 	
-	
-	public static void afficher() {
+	public void afficher() {
 		System.out.print(prenom + " " + nom );
 		
 	}
+
+
 }

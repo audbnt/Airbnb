@@ -16,15 +16,19 @@ public class Sejour {
 		this.dateArrivee = dateArrivee;
 		this.nbNuits = nbNuits;
 		this.logement = logement;
+		this.setNbVoyageurs(nbVoyageurs);
+	}
+
+
+	public int getNbVoyageurs() {
+		return nbVoyageurs;
+	}
+
+	public void setNbVoyageurs(int nbVoyageurs) {
 		this.nbVoyageurs = nbVoyageurs;
 	}
-	
-	public Date getDateArrivee() {
-		return dateArrivee;
-	}
-	
-	
 
+	
 	public void afficher() {
 		logement.afficher();
 		System.out.println("La date d'arrivée : " + Utile.dateToString(dateArrivee));	
@@ -32,5 +36,5 @@ public class Sejour {
 		int tarif = nbNuits * logement.getTarifParNuit();
 		System.out.println("Le tarif est : " + tarif + " euros ");
 	}
-
+	
 }
