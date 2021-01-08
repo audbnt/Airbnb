@@ -23,13 +23,7 @@ public class Hote extends Personne {
 	@Override
 	public void afficher() {
 		super.afficher();
-		System.out.print(" (" + getAge()+ " ans) ");
-		
-		if(getDelaiDeReponse() > 1) {
-			System.out.println("qui s'engage à répondre dans les " + getDelaiDeReponse()+" heures.");
-		}else if(getDelaiDeReponse() == 1) {
-			System.out.println("qui s'engage à répondre dans l'heure.");
-		}
+		System.out.print(" qui s'engage à répondre dans les " + delaiDeReponse + " heures");
 	}
 	
 	

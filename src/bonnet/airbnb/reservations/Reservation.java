@@ -2,7 +2,6 @@ package bonnet.airbnb.reservations;
 
 import java.util.Date;
 
-import bonnet.airbnb.utilisateurs.Personne;
 import bonnet.airbnb.utilisateurs.Voyageur;
 
 public class Reservation {
@@ -18,6 +17,12 @@ public class Reservation {
 		this.voyageur = voyageur;
 		setEstValidee(false);
 		setDateDeReservation(new Date());
+	}
+
+	public void afficher() {
+		voyageur.afficher();
+		System.out.print(" qui a fait une réservation chez ");
+		sejour.afficher();
 	}
 
 	public int getIdentifiant() {
@@ -42,11 +47,5 @@ public class Reservation {
 
 	public void setDateDeReservation(Date dateDeReservation) {
 		this.dateDeReservation = dateDeReservation;
-	}
-	
-	public void afficher() {
-		voyageur.afficher();
-		System.out.print(" qui a fait une réservation chez ");
-		sejour.afficher();
 	}
 }

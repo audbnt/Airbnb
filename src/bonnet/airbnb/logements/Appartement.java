@@ -29,23 +29,16 @@ public class Appartement extends Logement {
 		this.superficieBalcon = superficieBalcon;
 	}
 	
+	@Override
 	public void afficher() {
 		super.afficher();
-		System.out.print("Le logement est une maison située "+ getAdresse());
-		if(getNumeroEtage() == 0) {
-			System.out.println(" au rez-de-chaussée.");
-		}else if(getNumeroEtage() == 1) {
-			System.out.println(" au 1er étage.");
-		}else {
-			System.out.println(" au "+getNumeroEtage()+"ème étage.");
-		}
-		System.out.println("Superficie : "+ getSuperficie() +"m2");
-		System.out.print("Balcon : ");
-		if(getSuperficieBalcon()>0) {
-			System.out.println("Oui ("+getSuperficieBalcon()+"m2)");
-		}else {
-			System.out.println("Non");
-		}
+		System.out.println("Je suis un appartement");
+		
+	}
+
+	@Override
+	public int getSuperficieTotale() {
+		return superficieBalcon + getSuperficie();
 	}
 
 }

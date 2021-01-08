@@ -35,20 +35,12 @@ public class Maison extends Logement {
 	@Override
 	public void afficher() {
 		super.afficher();
-		System.out.println("Le logement est une maison située "+ getAdresse() +".");
-		System.out.println("Superficie : "+ getSuperficie() +"m2");
-		System.out.print("Jardin : ");
-		if(getSuperficieJardin() == 0) {
-			System.out.println("Non");
-		}else {
-			System.out.println("Oui ("+getSuperficieJardin()+"m2)");
-		}
-		System.out.print("Piscine : ");
-		if(isPossedePiscine()) {
-			System.out.println("Oui");
-		}else {
-			System.out.println("Non");
-		}
+		System.out.println("Je suis une maison");
+	}
+	
+	@Override
+	public int getSuperficieTotale() {
+		return superficieJardin + getSuperficie();
 	}
 	
 }

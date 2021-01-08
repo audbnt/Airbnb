@@ -1,9 +1,12 @@
 package bonnet.airbnb.reservations;
 
+
 public interface SejourInterface {
-	public boolean verificationDateArrivee() ;
-	public boolean verificationNombreDeNuits() ;
-	public boolean verificationNombreDeVoyageurs() ;
-	
-	public void afficher() ;
+	public boolean verficationDateArrivee();
+
+	public boolean verificationNombreDeNuits();
+
+	public boolean verificationNombreDeVoyageurs();
+
+	public void afficher();
 }

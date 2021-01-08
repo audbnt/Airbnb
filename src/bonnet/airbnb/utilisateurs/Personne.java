@@ -24,7 +24,6 @@ public class Personne {
 	
 	public void afficher() {
 		System.out.print(prenom + " " + nom );
-		
 	}
 
 
