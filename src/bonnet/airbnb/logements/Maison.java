@@ -2,14 +2,15 @@ package bonnet.airbnb.logements;
 
 import bonnet.airbnb.utilisateurs.Hote;
 
-public class Maison extends Logement {
-	private int superficieJardin ;
-	private boolean possedePiscine ;
-	public Maison(Hote hote, int tarifParNuit, String adresse, int superficie, int nbVoyageursMax, int superficieJardin,
+public final class Maison extends Logement {
+	private final int superficieJardin ;
+	private final boolean possedePiscine ;
+	
+	public Maison(String string, Hote hote, int tarifParNuit, String adresse, int superficie, int nbVoyageursMax, int superficieJardin,
 			boolean possedePiscine) {
 		super(hote, tarifParNuit, adresse, superficie, nbVoyageursMax);
-		this.setSuperficieJardin(superficieJardin);
-		this.setPossedePiscine(possedePiscine);
+		this.superficieJardin = superficieJardin;
+		this.possedePiscine = possedePiscine;
 	}
 
 
@@ -17,19 +18,8 @@ public class Maison extends Logement {
 		return superficieJardin;
 	}
 
-
-	public void setSuperficieJardin(int superficieJardin) {
-		this.superficieJardin = superficieJardin;
-	}
-
-
 	public boolean isPossedePiscine() {
 		return possedePiscine;
-	}
-
-
-	public void setPossedePiscine(boolean possedePiscine) {
-		this.possedePiscine = possedePiscine;
 	}
 	
 	@Override
@@ -42,5 +32,7 @@ public class Maison extends Logement {
 	public int getSuperficieTotale() {
 		return superficieJardin + getSuperficie();
 	}
+	
+	
 	
 }

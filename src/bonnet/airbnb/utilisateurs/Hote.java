@@ -1,30 +1,35 @@
 package bonnet.airbnb.utilisateurs;
 
+import bonnet.airbnb.outils.Comparable;
+public final class Hote extends Personne implements Comparable {
 
-public class Hote extends Personne {
-	private int delaiDeReponse ;
-	
-	public Hote(String pPrenom, String pNom, int pAge, int delaiDeReponse) {
-		super(pPrenom, pNom, pAge);
-		this.setDelaiDeReponse(delaiDeReponse);
-	}
+		private final int delaiReponse;
 
+		public Hote(String pPrenom, String pNom, int pAge, int pDelaiReponse) {
+			super(pPrenom, pNom, pAge);
+			delaiReponse = pDelaiReponse;
+		}
 
+		@Override
+		public void afficher() {
+			super.afficher();
+			System.out.print(" qui s'engage à répondre dans les " + delaiReponse + " heures");
+		}
 
-	public int getDelaiDeReponse() {
-		return delaiDeReponse;
-	}
+		@Override
+		public boolean equals(Object obj) {
 
-	public void setDelaiDeReponse(int delaiDeReponse) {
-		this.delaiDeReponse = delaiDeReponse;
-	}
-	
+			if (obj instanceof Hote) {
+				Hote hote = (Hote) obj;
+				return super.equals(hote) && this.delaiReponse == hote.delaiReponse;
+			}
 
-	@Override
-	public void afficher() {
-		super.afficher();
-		System.out.print(" qui s'engage à répondre dans les " + delaiDeReponse + " heures");
-	}
-	
-	
+			return false;
+		}
+
+		@Override
+		public int getValueToCompare() {
+			return delaiReponse;
+		}
 }
+

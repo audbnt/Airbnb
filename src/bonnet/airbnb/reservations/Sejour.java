@@ -13,10 +13,43 @@ public class Sejour implements SejourInterface {
 	private int nbVoyageurs;
 
 	public Sejour(Date dateArrivee, int nbNuits, Logement logement, int nbVoyageurs) {
-		this.dateArrivee = dateArrivee;
-		this.nbNuits = nbNuits;
-		this.logement = logement;
-		this.nbVoyageurs = nbVoyageurs;
+		this.setdateArrivee(dateArrivee);
+		this.setNbNuits(nbNuits);
+		this.setlogement(logement);
+		this.setNbVoyageurs(nbVoyageurs);
+	}
+	
+	
+	public int getNbNuits() {
+		return nbNuits;
+	}
+	
+	public int setNbNuits(int nbNuits) {
+		return this.nbNuits = nbNuits;
+	}
+	
+	public int getNbVoyageurs() {
+		return nbVoyageurs;
+	}
+	
+	public int setNbVoyageurs(int nbVoyageurs) {
+		return this.nbVoyageurs = nbVoyageurs;
+	}
+	
+	public Date getdateArrivee() {
+		return dateArrivee;
+	}
+	
+	public Date setdateArrivee(Date dateArrivee) {
+		return this.dateArrivee = dateArrivee;
+	}
+	
+	public Logement getlogement() {
+		return logement;
+	}
+	
+	public Logement setlogement(Logement logement) {
+		return this.logement = logement;
 	}
 
 	@Override

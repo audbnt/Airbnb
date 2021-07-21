@@ -2,31 +2,25 @@ package bonnet.airbnb.logements;
 
 import bonnet.airbnb.utilisateurs.Hote;
 
-public class Appartement extends Logement {
-	private int numeroEtage ;
-	private int superficieBalcon ;
-	public Appartement(Hote hote, int tarifParNuit, String adresse, int superficie, int nbVoyageursMax, int numeroEtage,
+public final class Appartement extends Logement {
+	
+	private final int numeroEtage ;
+	private final int superficieBalcon ;
+	
+
+	public Appartement(String string, Hote hote, int tarifParNuit, String adresse, int superficie, int nbVoyageursMax, int numeroEtage,
 			int superficieBalcon) {
 		super(hote, tarifParNuit, adresse, superficie, nbVoyageursMax);
-		this.setNumeroEtage(numeroEtage);
-		this.setSuperficieBalcon(superficieBalcon);
+		this.numeroEtage = numeroEtage;
+		this.superficieBalcon = superficieBalcon;
 	}
-	
 
 	public int getNumeroEtage() {
 		return numeroEtage;
 	}
 
-	public void setNumeroEtage(int numeroEtage) {
-		this.numeroEtage = numeroEtage;
-	}
-
 	public int getSuperficieBalcon() {
 		return superficieBalcon;
-	}
-
-	public void setSuperficieBalcon(int superficieBalcon) {
-		this.superficieBalcon = superficieBalcon;
 	}
 	
 	@Override
@@ -41,4 +35,5 @@ public class Appartement extends Logement {
 		return superficieBalcon + getSuperficie();
 	}
 
+	
 }
